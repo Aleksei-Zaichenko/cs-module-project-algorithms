@@ -6,7 +6,7 @@ Returns: an integer
 
 def single_number(arr):
     # Your code here
-    numberOfAppearances = {}
+    numberOfAppearances = {} # 1:2, 2:2
     singleNumber = 0
 
     for item in range (len(arr)):
@@ -17,11 +17,11 @@ def single_number(arr):
             numberOfAppearances[number] = 1
 
 
-    for x in numberOfAppearances:
+    for x in numberOfAppearances: # 3:1
         if numberOfAppearances[x] == 1:
-            singleNumber = x
+            singleNumber = x # 3
             
-    return singleNumber
+    return singleNumber #3
 
 
 if __name__ == '__main__':
