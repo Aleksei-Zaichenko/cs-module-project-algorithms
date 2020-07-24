@@ -3,17 +3,22 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 
-
+# [1,2,3,4,5,6,7,8,9]
+# k = 2
+# [1,2] 2
+# [2,3] 3
+# [3,4] 4
 def sliding_window_max(nums, k):
     result = []
     tempList = []
 
-    for i in range( len(nums)- k + 1 ):
+
+    for i in range( len(nums)- k + 1 ): # 7, 5 O(n*k)
         max = nums[i]
         
         # tempList will containt k number of elements
         # for example if k = 3, templist will containt 3 elements
-        tempList.extend(nums[i:k+i])
+        tempList.extend(nums[i:k+i]) 
 
         # then we choose the largest element from tempList
         for number in tempList:

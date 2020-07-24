@@ -3,9 +3,14 @@
 import sys
 
 def rock_paper_scissors(n):
-  # Your code here
+  if n == 0:
+    return []
+  if n >= 1:
+    return rock_paper_scissors(n-1)
 
-  pass
+  choices = [['rock'],['paper'],['scissors']]
+  def fun(listOfWays):
+    
 
 
 if __name__ == "__main__":
